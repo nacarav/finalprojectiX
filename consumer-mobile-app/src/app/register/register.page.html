@@ -1,0 +1,71 @@
+<!-- Note: Do not auto-format. -->
+
+<ion-content padding class="background">
+  <ion-col text-center>
+    <div class="ion-padding">
+
+        <b><font color="black">Please enter your information.</font></b><br><br>
+
+      <!-- Enter Email -->
+      <ion-item text-center color=transparent>
+        <ion-label>
+          <ion-icon name="person" item-left></ion-icon>
+        </ion-label>
+        <ion-input clear-input=true placeholder="Email" clearOnEdit=true [(ngModel)]="valEmail" input type="Username">
+        </ion-input>
+      </ion-item>
+
+      <!-- Enter Password -->
+      <ion-item text-center color=transparent>
+        <ion-label>
+          <ion-icon name="lock" item-left></ion-icon>
+        </ion-label>
+        <ion-input clear-input=true placeholder="Password" clearOnEdit=true [(ngModel)]="valPass" input type="Password">
+        </ion-input>
+      </ion-item>
+
+      <!-- Confirm Password -->
+      <ion-item text-center color=transparent>
+        <ion-label>
+          <ion-icon name="lock" item-left></ion-icon>
+        </ion-label>
+        <ion-input clear-input=true placeholder="Confirm Password" clearOnEdit=true [(ngModel)]="valPassC" input
+          type="Password"></ion-input>
+      </ion-item>
+
+      <!-- Enter First Name -->
+      <ion-item text-center color=transparent>
+        <ion-label>
+          <ion-icon name="person" item-left></ion-icon>
+        </ion-label>
+        <ion-input clear-input=true placeholder="First Name" clearOnEdit=true [(ngModel)]="valFirstName" input
+          type="Username"></ion-input>
+      </ion-item>
+
+      <!-- Enter Last Name -->
+      <ion-item text-center color=transparent>
+        <ion-label>
+          <ion-icon name="person" item-left></ion-icon>
+        </ion-label>
+        <ion-input clear-input=true placeholder="Last Name" clearOnEdit=true [(ngModel)]="valLastName" input
+          type="Username"></ion-input>
+      </ion-item>
+
+      <!-- Dynamic response that tells you what you're doing wrong. -->
+      <font color="black">{{response}}</font><br>
+
+      <!-- Create account button with method. -->
+      <ion-label>
+        <ion-button (click)="createClicked()">Create Account</ion-button>
+      </ion-label><br><br><br>
+      
+      <!-- Go Back button -->
+      <ion-label>
+        <ion-button (click)="goBack()" color="dark">Go Back</ion-button>
+      </ion-label><br><br>
+
+      <img src="https://cdn.freebiesupply.com/images/large/2x/airbnb-logo.png" alt="airbnblogo" height="240"
+        width="360">
+    </div>
+  </ion-col>
+</ion-content>

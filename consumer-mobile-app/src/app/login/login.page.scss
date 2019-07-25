@@ -1,0 +1,13 @@
+ion-content.background{
+    --background: url(https://wallpapercave.com/wp/wp3611752.jpg) 0 0/100% 100% no-repeat;
+  }
+
+ion-item {
+    border-radius: 20px !important;
+    //padding-left: 30px !important;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    border-bottom: 0px !important;
+    box-shadow: none !important;
+}

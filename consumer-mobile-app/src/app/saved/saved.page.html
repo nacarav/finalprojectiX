@@ -1,0 +1,36 @@
+<!-- Format for header to have refresh button and be green. -->
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title>Booked</ion-title>
+    <ion-buttons slot="primary">
+        <ion-button (click)="refreshButton()">
+            <ion-icon name="sync">
+              <ion-label>Refresh</ion-label>
+            </ion-icon>
+          </ion-button>
+        </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+      <!-- Provider helpful -->
+      <!-- <ion-buttons slot="primary">
+        <ion-button (click)="addListing()">
+          <ion-icon name="add-circle"></ion-icon>
+          <ion-label>Add Listing</ion-label>
+        </ion-button>
+      </ion-buttons> -->
+  
+      
+      <!-- Automatic listing generator that pulls from it's data from the "listing" variable from TS. -->
+  <ion-content>
+    <ion-card *ngFor="let list of listing">
+      <img src="{{list.listingImgURL}}" />
+      <ion-card-header>
+        <ion-card-subtitle>{{list.listingPrice}}</ion-card-subtitle>
+        <ion-card-subtitle>Available from {{list.listingStart}} until {{list.listingEnd}}</ion-card-subtitle>
+        <ion-card-title>{{list.listingName}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>{{list.listingDescription}}</ion-card-content>
+      <ion-button slot="primary" (click)="expandClicked(list)"><ion-icon name="logo-usd"></ion-icon></ion-button>
+    </ion-card>
+  </ion-content>

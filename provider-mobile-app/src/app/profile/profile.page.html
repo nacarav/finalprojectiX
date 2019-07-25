@@ -1,0 +1,28 @@
+<!-- Syntax for header to be blue, say Profile, and have a settings button that doesn't work. -->
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Profile</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button>
+        <ion-icon name="settings">
+          <ion-label></ion-label>
+        </ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content text=center>
+  <ion-avatar>
+    <img src="https://thehappypuppysite.com/wp-content/uploads/2017/10/Cute-Dog-Names-HP-long.jpg">
+  </ion-avatar>
+
+  <div class="ion-text-start">
+    <h3>Hi {{firstName}} {{lastName}}...</h3>
+    Our engineers are hard at work, but unfortunately the profile configuration team has all gone on strike. We're in
+    the process of
+    working out a deal with them, but we have no ETA when this feature tab will be complete. In the meantime, enjoy this
+    gif of a cute puppy.
+    <img src="https://media2.giphy.com/media/1hM5kW7OU6d7AOUUjv/giphy.gif">
+  </div>
+</ion-content>

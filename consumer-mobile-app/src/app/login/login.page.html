@@ -1,0 +1,40 @@
+<!-- Main ion host, padding class "background" references beach stock photo to be in the background. -->
+<ion-content padding class="background">
+  <ion-col text-center>
+    <div class="ion-padding">
+
+      <!-- "Please log in to continue" and "Thank you for logging in" text. -->
+      <b>
+        <font>{{textContinue}}{{usrValOutput}}</font>
+      </b><br><br>
+
+      <!-- Username and Password text boxes. -->
+      <ion-item text-center color=transparent >
+        <ion-label><ion-icon name="person" item-left></ion-icon></ion-label>
+        <ion-input clear-input=true placeholder="Email" clearOnEdit=true [(ngModel)]="usrVal" input type="Username"></ion-input>
+      </ion-item>
+      <ion-item text-center color=transparent>
+        <ion-label><ion-icon name="lock" item-left></ion-icon></ion-label>
+        <ion-input clear-input=true placeholder="Password" clearOnEdit=true [(ngModel)]="pasVal" input type="Password"></ion-input>
+      </ion-item> 
+
+      <!-- Main Log-in button, changes colors when sign in is failed or success. -->
+      <ion-label>
+        <ion-button (click)="logInClicked()" color={{colorWord}}>Log-In</ion-button>
+      </ion-label>
+      <br><br>
+      <font color="black">Register if you don't have an account.</font>
+      <br><br>
+
+      <!-- Continue button, is disabled until "boolContinue" becomes false, triggered by logging into a valid account. -->
+      <ion-label>
+        <ion-button (click)="continueClicked()" color="secondary" disabled={{boolContinue}}>Continue</ion-button>
+        <ion-button (click)="registerClicked()">Register</ion-button>
+      </ion-label>
+      <br><br><br><br><br><br><br><br>
+
+      <!-- Air BnB logo at the bottom of the page. -->
+      <img src="https://cdn.freebiesupply.com/images/large/2x/airbnb-logo.png" alt="airbnblogo" height="240" width="360">
+    </div>
+  </ion-col>
+</ion-content>

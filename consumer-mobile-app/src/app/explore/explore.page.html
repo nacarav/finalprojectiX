@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-toolbar color="danger">
+
+    <ion-buttons slot="secondary">
+      <ion-button href="/login/">
+        <ion-icon name="return-left"></ion-icon>
+        <ion-label>Sign Out</ion-label>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+    <ion-button (click)="refreshButton()">
+        <ion-icon name="sync">
+          <ion-label>Refresh</ion-label>
+        </ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-col text-center>
+      <ion-title>
+        <b>
+          <font color="lightgrey"></font>
+        </b>
+      </ion-title>
+    </ion-col>
+
+    <!-- Provider helpful -->
+    <!-- <ion-buttons slot="primary">
+      <ion-button (click)="addListing()">
+        <ion-icon name="add-circle"></ion-icon>
+        <ion-label>Add Listing</ion-label>
+      </ion-button>
+    </ion-buttons> -->
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-searchbar placeholder="Search"></ion-searchbar>
+
+  <ion-card *ngFor="let list of listing">
+    <img src="{{list.listingImgURL}}" />
+    <ion-card-header>
+      <ion-card-subtitle>{{list.listingPrice}}</ion-card-subtitle>
+      <ion-card-subtitle>Available from {{list.listingStart}} until {{list.listingEnd}}</ion-card-subtitle>
+      <ion-card-title>{{list.listingName}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>{{list.listingDescription}}</ion-card-content>
+    <ion-button slot="primary" (click)="expandClicked(list)"><ion-icon name="logo-usd"></ion-icon></ion-button>
+  </ion-card>
+
+  <!-- <ion-card>
+    <img src="https://assets.traveltriangle.com/blog/wp-content/uploads/2014/11/most-haunted-places-in-the-world.jpg" />
+    <ion-card-header>
+      <ion-card-subtitle>$7.99/night | 5 rooms | "Spatious"</ion-card-subtitle>
+      <ion-card-title>Helena, MT</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Every customer has had a thrilling time! Creepy girl inside that might watch you. We tried to get rid of her but
+      failed. She doesn't mind AirBnB visitors though.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <img src="https://s29043.pcdn.co/wp-content/uploads/2016/05/bran-castle-transylvania_-2-1200x801.jpg" />
+    <ion-card-header>
+      <ion-card-subtitle>$89.99/night | 57 rooms | "Medieval"</ion-card-subtitle>
+      <ion-card-title>Transylvania, Romania</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Experience Dracula's castle for the night! Absolutely comfortable feel of traditional concrete and stone interior.
+      Comes with a cauldron and fire-pit.<br>
+      For an additional 3 easy payments of $149.99 includes personal assistant "Dracula" to take care of housekeeping
+      and cooking.<br>
+      <i>Disclaimer: We can not guarantee your safety from Dracula.</i>
+    </ion-card-content>
+  </ion-card> -->
+
+</ion-content>

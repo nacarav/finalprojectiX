@@ -1,0 +1,13 @@
+ion-content.background{
+    --background: url(https://i.pinimg.com/originals/79/9d/92/799d9235f94578f3804e838c6991cf45.jpg) 0 0/100% 100% no-repeat;
+  }
+
+ion-item {
+    border-radius: 20px !important;
+    //padding-left: 30px !important;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    border-bottom: 0px !important;
+    box-shadow: none !important;
+}
