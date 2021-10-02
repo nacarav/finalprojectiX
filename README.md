@@ -1,10 +1,10 @@
-# Nick Caravaggio Final Project Submission
-My attempt at following instructions
-## Project Structure 
+# Nick Caravaggio Final Project
+
+## Project Guidelines
 
 ### Project Structure Table
 
-| PROJECT             | COMPONENT          | FILE NAMES                                                                                                                                                                              |
+| Host                | COMPONENT          | FILE NAMES                                                                                                                                                                              |
 |---------------------|--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Consumer mobile app | Login              | main-project\consumer-mobile-app\consumer-mobile-app\src\pages\login & main-project\consumer-mobile-app\consumer-mobile-app\src\providers\login               |
 | Consumer mobile app | Registration       | main-project\consumer-mobile-app\consumer-mobile-app\src\pages\registration & eg. Rubric-file-structure\consumer-mobile-app\consumer-mobile-app\src\providers\registration |
